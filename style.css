@@ -1,0 +1,429 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --ti-cursor-color: rgb(255, 222, 112);
+  --ti-cursor-margin-left: 0.1em;
+}
+
+body {
+  font-family: "Do Hyeon", sans-serif;
+  font-family: "Noto Serif KR", serif;
+  font-family: "Pacifico", cursive;
+}
+
+[data-scroll] {
+  opacity: 0;
+  will-change: transform, scale, opacity;
+  transform: translateY(6rem) scale(0.93);
+  transition: all 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+[data-scroll="in"] {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+[data-scroll="out"] {
+  opacity: 0;
+}
+
+ul {
+  padding-left: 0;
+}
+
+#comment,
+#invite,
+#bank,
+#gallery,
+#map {
+  font-family: "Noto Serif KR", serif;
+  width: 100%;
+  text-align: center;
+  padding: 50px 0;
+}
+
+#home {
+  background-image: url("./img/main.jpeg");
+  background-size: cover;
+  background-position: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  min-height: 480px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  color: white;
+  font-size: 30px;
+}
+
+.name {
+  top: 1000px;
+  text-shadow: 10px 10px 0px rgb(0 0 0 / 50%);
+}
+
+.name {
+  font-family: "Do Hyeon";
+  font-size: 80px;
+  text-align: center;
+}
+
+.eng {
+  font-family: "Pacifico";
+  font-size: 30px;
+  text-shadow: 6px 6px 0px rgb(0 0 0 / 20%);
+}
+
+.date_place {
+  font-family: "Do Hyeon";
+  font-size: 30px;
+  text-align: center;
+  text-shadow: 6px 6px 0px rgb(0 0 0 / 20%);
+}
+
+/* 토글버튼 */
+.navbar_toggle_btn {
+  border: 2px solid orange;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  border-radius: 10px;
+  background-color: transparent;
+  display: none;
+}
+
+.navbar_toggle_btn img {
+  width: 30px;
+  height: auto;
+  display: block;
+}
+
+/* 네브바 */
+#navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+}
+
+.menu {
+  display: flex;
+  background-color: rgb(223, 223, 223);
+}
+
+li,
+.man,
+.lady {
+  font-size: 2.2vh;
+}
+
+li {
+  font-family: "Do Hyeon";
+  list-style: none;
+  padding-right: 50px;
+  padding-left: 50px;
+  line-height: 40px;
+  transition: all 200ms ease;
+}
+
+li:hover {
+  transform: scale(1.1);
+  color: rgb(82, 76, 76);
+  text-shadow: 3px 3px 0px rgb(0 0 0 / 20%);
+}
+
+/* 신랑 신부  */
+#member {
+  margin-top: 30px;
+}
+
+#member h1 {
+  font-family: "Noto Serif KR", serif;
+  width: 100%;
+  text-align: center;
+}
+
+.member {
+  display: flex;
+  justify-content: space-around;
+  font-family: "Do Hyeon";
+}
+.man img,
+.lady img {
+  width: 400px;
+  border-radius: 10px;
+  margin-bottom: 10vh;
+}
+/* 감사의 인사 */
+#comment {
+  background-color: rgb(255, 206, 134);
+  padding: 15vh;
+}
+#comment h3 {
+  width: 50%;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  text-align: left;
+  font-size: 1.5vw;
+}
+
+/* 초대합니다 */
+
+#invite {
+  background-color: blanchedalmond;
+}
+
+#member h1,
+#comment h1,
+#invite h1 {
+  padding: 30px 0;
+  font-size: 2vw;
+}
+
+#invite img {
+  width: 30%;
+  margin-bottom: 20px;
+}
+
+.place_detail,
+.food_detail {
+  width: 50%;
+}
+
+.invite_place {
+  display: flex;
+  justify-content: space-around;
+}
+
+.invite_food {
+  display: flex;
+  justify-content: space-around;
+}
+/* 마음 전하는 곳 */
+#bank {
+  text-align: center;
+  background-color: rgb(241, 231, 84);
+}
+
+#bank h2 {
+  margin: 20px 0;
+  font-size: 2vw;
+}
+
+/* 갤러리 */
+#gallery {
+  text-align: center;
+}
+#gallery h2 {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 2vw;
+}
+
+#gallery div img {
+  width: 22%;
+  padding: 10px 5px;
+  filter: grayscale(70%);
+  transition: all 200ms ease-in-out;
+}
+
+#gallery div img:hover,
+#gallery div img:active {
+  scale: 1.03;
+  filter: grayscale(0%);
+}
+
+/*  오시는 길 */
+
+#map {
+  background-color: blanchedalmond;
+}
+
+#map h2 {
+  margin-bottom: 3vh;
+  font-size: 2vw;
+}
+.naver,
+.kakao {
+  width: 40%;
+  height: auto;
+  margin-right: 1rem;
+  margin-bottom: 3vh;
+}
+
+.map_list {
+  display: flex;
+  justify-content: center;
+}
+
+#daumRoughmapContainer1671635946941 {
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+  /* 모바일 네브바 + 토글 */
+  .navbar_toggle_btn {
+    display: block;
+    /* width: 100%; */
+  }
+
+  .grey_bar {
+    background-color: rgb(223, 223, 223);
+    position: absolute;
+    top: 0;
+    left: 0px;
+    height: 40px;
+    width: 100%;
+  }
+
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    display: none;
+  }
+  .menu.open {
+    display: block;
+    width: 100%;
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  /* 모바일 '맨위로' */
+  #home {
+    background-image: url("./img/main.jpeg");
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    height: 100vh;
+  }
+
+  /* 모바일 타이틀 */
+  .name {
+    font-size: 40px;
+  }
+
+  .eng,
+  .date_place {
+    margin-top: 2rem;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  /* 모바일 신랑 신부  */
+  .member {
+    display: block;
+    margin: 0 auto;
+  }
+
+  #member h1 {
+    font-size: 45px;
+  }
+
+  .man p,
+  .lady p {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .man img,
+  .lady img {
+    width: 80%;
+    margin-left: 30px;
+  }
+  /* 모바일 감사의 인사 */
+  #comment {
+    padding: 30px 30px;
+    margin: 0;
+  }
+
+  #comment h1 {
+    font-size: 30px;
+    display: inline;
+  }
+
+  #comment h3 {
+    width: 70%;
+    font-size: 14px;
+  }
+  #comment img {
+    width: 50%;
+    margin: 0 auto;
+    display: block;
+  }
+  /* 모바일 초대합니다 */
+  #invite h1 {
+    font-size: 30px;
+  }
+  #invite span {
+    font-size: 20px;
+  }
+
+  #invite p {
+    font-size: 14px;
+    padding-top: 5px;
+  }
+  #invite .remain_inform {
+    padding-bottom: 60px;
+  }
+
+  .invite_place,
+  .invite_food {
+    flex-direction: column;
+    display: block;
+  }
+
+  .place_detail,
+  .food_detail {
+    margin: 0 auto;
+    width: 70%;
+    padding-bottom: 20px;
+  }
+
+  #invite img {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+  /* 모바일 마음 전하실 곳 */
+  #bank h2 {
+    font-size: 30px;
+  }
+
+  /* 모바일 갤러리 */
+  #gallery h2 {
+    font-size: 30px;
+  }
+  #gallery div img {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+  }
+  /* 모바일 오시는길 */
+  #map h2 {
+    font-size: 30px;
+    padding-top: 30px;
+  }
+
+  .map_list {
+    display: flex;
+  }
+  .naver,
+  .kakao {
+    width: 40%;
+  }
+  .kakao {
+    margin-left: 30px;
+  }
+  .naver {
+    margin-right: 30px;
+  }
+}

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Noto+Serif+KR:wght@300;700&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+    <title>&#x2764; Wedding Card Sample</title>
+  </head>
+  <body>
+    <nav id="navbar">
+      <ul class="menu">
+        <li data-link="#home">맨위로</li>
+        <li data-link="#member">신랑/신부</li>
+        <li data-link="#gallery">갤러리</li>
+        <li data-link="#map">오시는 길</li>
+      </ul>
+      <div class="grey_bar"></div>
+      <button class="navbar_toggle_btn">
+        <img src="./img/toggle.png" alt="" />
+      </button>
+    </nav>
+
+    <section id="home">
+      <div class="content">
+        <p id="title" class="name">안녕하세요</p>
+        <div>
+          <p class="eng">WE ARE GETTING MARRIED</p>
+          <p class="date_place">
+            2023.03.18 토요일 오후 16:00<br />
+            안양 평촌 아르떼 웨딩홀 5층
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="member" data-scroll>
+      <h1>Groom & Bride</h1>
+      <div class="member">
+        <div class="man">
+          <p>Groom</p>
+          <img src="./member/man.png" alt="신랑" />
+        </div>
+        <div class="lady">
+          <p>Bride</p>
+          <img src="./member/lady.jpeg" alt="신부" />
+        </div>
+      </div>
+    </section>
+    <section id="comment" data-scroll>
+      <h1 id="comment_anime">감사의 인사</h1>
+      <img src="./img/flower.png" alt="" />
+      <div>
+        <h3>
+          안녕하십니까 이 청첩장을 받으신 분들은 모두 저에게 소중하신
+          분들입니다. 바쁘시더라도 가벼운 발걸음으로 와주시어 축하해 주신다면 그
+          어떤 축의금 봉투보다 감사히 기억하고 보답하겠습니다.
+        </h3>
+      </div>
+      <div>
+        <h3>
+          찾아봬서 먼저 안부를 여쭙고 청첩장을 드리는 것이 예의이오나, 그러지
+          못한 점 매우 죄송합니다.<br />
+          베트남에서 생활하기 때문에 소중하신 분들께 감사한 마음을 어떻게
+          전해드려야 하나 오랜 시간 고민했습니다. 그러다 보니 이렇게 직접 제작한
+          청첩장을 만들어서 드리게 되었습니다.<br />
+        </h3>
+      </div>
+      <div>
+        <h3>
+          행복한 순간을 맞은 저에게 덕담을 부탁드려도 될지요?<br />
+          꽃이 피는 3월에 기다리겠습니다 :)
+        </h3>
+      </div>
+    </section>
+
+    <section id="invite" data-scroll>
+      <h1>초대합니다</h1>
+      <span>| 결혼식까지 남은 시간 |</span>
+      <p class="remain_time"></p>
+      <p class="remain_inform">만난지 3년 + 280일째 되는날 결혼합니다</p>
+      <div class="invite_place">
+        <div class="place_detail">
+          <h3>웨딩 본식</h3>
+          <p>안양 평촌 아르떼 웨딩홀 5층</p>
+        </div>
+        <img src="./img/place.jpg" alt="결혼식장소" />
+      </div>
+      <div class="invite_food">
+        <div class="food_detail">
+          <h3>식사</h3>
+          <p>갈비탕과 한정식</p>
+        </div>
+        <img src="./img/food.jpg" alt="음식" />
+      </div>
+    </section>
+    <section id="bank">
+      <h2>마음전하실 곳 <br />(계좌번호)</h2>
+      <p>홍길동 | 농협 | <br />123 - 456- 123 - 00</p>
+    </section>
+    <section id="gallery" data-scroll>
+      <h2>포토 갤러리</h2>
+      <div>
+        <img src="./gallery/1.jpeg" alt="" />
+        <img src="./gallery/2.jpeg" alt="" />
+        <img src="./gallery/3.jpeg" alt="" />
+      </div>
+      <div>
+        <img src="./gallery/4.jpeg" alt="" />
+        <img src="./gallery/5.jpeg" alt="" />
+        <img src="./gallery/8.jpeg" alt="" />
+      </div>
+    </section>
+    <section id="map">
+      <h2>오시는 길</h2>
+      <div class="map_list">
+        <div>
+          <a href="https://place.map.kakao.com/26929876" target="_blank">
+            <img class="kakao" src="./map/kakao-map.png" alt="카카오지도" />
+          </a>
+        </div>
+        <div>
+          <a href="https://naver.me/FmgVC9Ud" target="_blank">
+            <img class="naver" src="./map/naver-map.png" alt="네이버지도" />
+          </a>
+        </div>
+      </div>
+      <!-- 카카오 지도 -->
+      <div
+        id="daumRoughmapContainer1671635946941"
+        class="root_daum_roughmap root_daum_roughmap_landing"
+        style="width: 60%"
+      ></div>
+    </section>
+
+    <script src="main.js"></script>
+    <script src="dDay.js"></script>
+
+    <!--
+	2. 설치 스크립트
+	* 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+-->
+    <script
+      charset="UTF-8"
+      class="daum_roughmap_loader_script"
+      src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"
+    ></script>
+    <!-- 3. 실행 스크립트 -->
+    <script charset="UTF-8">
+      new daum.roughmap.Lander({
+        timestamp: "1671635946941",
+        key: "2d54p",
+        mapHeight: "360",
+      }).render();
+    </script>
+  </body>
+</html>
